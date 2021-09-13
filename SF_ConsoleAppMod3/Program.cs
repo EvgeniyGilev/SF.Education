@@ -6,8 +6,14 @@ namespace SF_ConsoleAppMod3
     {
         public static void Main(string[] args)
         {
-            const string myName = "Evgeniy";
-            Console.WriteLine(myName);
+            const string MyName = "Jane";
+
+            Console.WriteLine(MyName);
+
+            Console.WriteLine("\tПривет, мир");
+            Console.WriteLine("\tМне 27 лет");
+            Console.WriteLine("\tMy name is\n Jane");
+
             Console.ReadKey();
         }
     }
