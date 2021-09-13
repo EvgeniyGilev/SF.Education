@@ -13,6 +13,8 @@ namespace SF_ConsoleAppMod3
             Console.WriteLine("\tПривет, мир");
             Console.WriteLine("\tМне 27 лет");
             Console.WriteLine("\tMy name is\n Jane");
+            Console.WriteLine("\u0040");
+            Console.WriteLine("\x23");
 
             Console.ReadKey();
         }
