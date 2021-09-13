@@ -4,9 +4,20 @@ namespace SF_ConsoleAppMod3
 {
     class Program
     {
+        /// <summary>
+        /// Перечисление для задания 3.4.3
+        /// </summary>
+        enum Semaphore : int
+        {
+            Red = 100,
+            Yellow=200,
+            Green =300
+        }
+
         public static void Main(string[] args)
         {
             const string MyName = "Jane";
+
 
             Console.WriteLine(MyName);
 
@@ -31,7 +42,6 @@ namespace SF_ConsoleAppMod3
             Console.WriteLine("My shoe size is " + MyShoeSize);
 
             Console.ReadKey();
-
         }
     }
 }
