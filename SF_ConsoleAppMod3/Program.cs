@@ -10,8 +10,8 @@ namespace SF_ConsoleAppMod3
         enum Semaphore : int
         {
             Red = 100,
-            Yellow=200,
-            Green =300
+            Yellow = 200,
+            Green = 300
         }
 
         public static void Main(string[] args)
@@ -29,9 +29,9 @@ namespace SF_ConsoleAppMod3
 
             Console.ReadKey();
 
-            ///
-            /// Следующий пример, с перменными разных типов
-            /// 
+
+            // Следующий пример, с перменными разных типов
+
             byte MyAge = 27;
             bool HaveIApet = true;
             double MyShoeSize = 37.5;
@@ -42,6 +42,30 @@ namespace SF_ConsoleAppMod3
             Console.WriteLine("My shoe size is " + MyShoeSize);
 
             Console.ReadKey();
+
+            //byte age =18;
+            //Console.WriteLine($"Мой возраст {age}");
+
+            //Console.ReadKey();
+
+            // код для вывода трех переменых последовательно
+
+            string name = "Jane";
+            byte age = 27;
+            ConsoleColor favcolor = ConsoleColor.Black;
+            Console.WriteLine("{0} \n {1} \n {2}", name, age, favcolor);
+
+            string str = Console.ReadLine();
+
+            // добавим пример с tryParse
+
+            Console.Write("Enter your age: ");
+            int myAge;
+            bool iscorrect = int.TryParse(Console.ReadLine(), out myAge);
+            Console.WriteLine(iscorrect ? "Your age is " + myAge : "Wrong string age ");
+            Console.ReadKey();
+
+
         }
     }
 }
