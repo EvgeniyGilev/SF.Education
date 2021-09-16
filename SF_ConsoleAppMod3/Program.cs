@@ -14,6 +14,8 @@ namespace SF_ConsoleAppMod3
             Green = 300
         }
 
+
+
         public static void Main(string[] args)
         {
             const string MyName = "Jane";
@@ -64,6 +66,28 @@ namespace SF_ConsoleAppMod3
             bool iscorrect = int.TryParse(Console.ReadLine(), out myAge);
             Console.WriteLine(iscorrect ? "Your age is " + myAge : "Wrong string age ");
             Console.ReadKey();
+
+            Console.Write("Enter your name: ");
+            string name1 = Console.ReadLine();
+            Console.Write("Enter your age: ");
+            try
+            {
+                byte age1 = checked((byte)int.Parse(Console.ReadLine()));
+                Console.WriteLine("Your name is {0} and age is {1} ", name1, age1);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
+            Console.Write("What is your favorite day of week?: ");
+            string myDay = Console.ReadLine();
+            Console.Write("Your favorite day is: " + Enum.Parse(typeof(DayOfWeek),myDay));
+
+
+
+            Console.ReadKey();
+
 
 
         }
