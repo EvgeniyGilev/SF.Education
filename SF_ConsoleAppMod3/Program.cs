@@ -81,9 +81,9 @@ namespace SF_ConsoleAppMod3
             }
 
             Console.Write("What is your favorite day of week?: ");
-            string myDay = Console.ReadLine();
+            var myDay = Console.ReadLine();
             Console.Write("Your favorite day is: " + Enum.Parse(typeof(DayOfWeek),myDay));
-
+           
 
 
             Console.ReadKey();

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SF_ConsoleAppMod3", "SF_ConsoleAppMod3\SF_ConsoleAppMod3.csproj", "{8A22A136-EE91-4A30-8C59-58E2D27BF13E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SF.Education.Mod3_ConsoleApp", "SF_ConsoleAppMod3\SF.Education.Mod3_ConsoleApp.csproj", "{8A22A136-EE91-4A30-8C59-58E2D27BF13E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SF.Education.Mod4_ConsoleApp", "SF.Education.Mod4_ConsoleApp\SF.Education.Mod4_ConsoleApp.csproj", "{02189A3E-9932-4D42-9D24-C6833552D43D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8A22A136-EE91-4A30-8C59-58E2D27BF13E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A22A136-EE91-4A30-8C59-58E2D27BF13E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A22A136-EE91-4A30-8C59-58E2D27BF13E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02189A3E-9932-4D42-9D24-C6833552D43D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02189A3E-9932-4D42-9D24-C6833552D43D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02189A3E-9932-4D42-9D24-C6833552D43D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02189A3E-9932-4D42-9D24-C6833552D43D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
