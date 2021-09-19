@@ -245,7 +245,7 @@ namespace SF.Education.Mod4_ConsoleApp
             }
             Console.WriteLine();
             Console.WriteLine("отсортрованный от меньшего к большему: ");
-            //Пузырьком
+            //Сортировка Пузырьком 4.3.12
             var minArr = new int[arr.Length];
             for (int j = 0; j < arr.Length - 1; j++)
             {
@@ -267,6 +267,17 @@ namespace SF.Education.Mod4_ConsoleApp
                 Console.Write(el + " ");
             }
             Console.ReadKey();
+            //Сумма элементов массива
+            Console.WriteLine("Ищем сумму элементво массива: ");
+            var arr2 = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            var sumarr2 = 0;
+            foreach (var el in arr2)
+            {
+                Console.Write(el + " ");
+                sumarr2 = sumarr2 + el;
+            }
+            Console.WriteLine();
+            Console.WriteLine(sumarr2);
 
         }
 
