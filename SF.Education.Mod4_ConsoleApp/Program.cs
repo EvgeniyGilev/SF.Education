@@ -192,7 +192,7 @@ namespace SF.Education.Mod4_ConsoleApp
 
                          Console.WriteLine("Your color is yellow!");*/
                         continue;
-            
+
                 }
 
                 K++;
@@ -238,7 +238,7 @@ namespace SF.Education.Mod4_ConsoleApp
 
             Console.ReadKey();
             Console.WriteLine("Исходный массив для сортировки: ");
-            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4,-5 };
             foreach (var el in arr)
             {
                 Console.Write(el + " ");
@@ -246,16 +246,15 @@ namespace SF.Education.Mod4_ConsoleApp
             Console.WriteLine();
             Console.WriteLine("отсортрованный от меньшего к большему: ");
             //Сортировка Пузырьком 4.3.12
-            var minArr = new int[arr.Length];
-            for (int j = 0; j < arr.Length - 1; j++)
+            for (int j = 0; j < arr.Length; j++)
             {
-                for (int i =0; i < arr.Length -1; i++)
+                for (int i = j+1; i < arr.Length; i++)
                 {
-                    if (arr[i] > arr[i + 1])
+                    if (arr[i] < arr[j])
                     {
                         var p = arr[i];
-                        arr[i] = arr[i + 1];
-                        arr[i + 1] = p;
+                        arr[i] = arr[j];
+                        arr[j] = p;
                     }
 
                 }
@@ -304,10 +303,39 @@ namespace SF.Education.Mod4_ConsoleApp
             {
                 Console.Write(el + " ");
                 if (el > 0)
-                cc++;
+                    cc++;
             }
             Console.WriteLine();
             Console.WriteLine(cc);
+            Console.ReadKey();
+
+            //Пример подсчета положительных элементов в массиве Задание 4.3.15
+            Console.WriteLine("на этом же массиве сортировка пузырьком по каждой строке ");
+            for (int r = 0; r <= array3.GetUpperBound(0); r++)
+            {
+
+                for (int j = 0; j <= array3.GetUpperBound(1); j++)
+                {
+                    for (int i = j + 1; i <= array3.GetUpperBound(1); i++)
+                    {
+                        if (array3[r,i] < array3[r,j])
+                        {
+                            var p = array3[r,i];
+                            array3[r,i] = array3[r,j];
+                            array3[r,j] = p;
+                        }
+
+                    }
+
+                }
+            }
+
+            foreach (var item in array3)
+            {
+                Console.Write(item + " ");
+            }
+
+            Console.WriteLine();
             Console.ReadKey();
 
 
