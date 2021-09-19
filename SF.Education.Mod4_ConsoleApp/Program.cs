@@ -30,39 +30,39 @@ namespace SF.Education.Mod4_ConsoleApp
             Console.ReadKey();
               */
             //Пример 2 - 4.1. Условные выражения и конструкции - задание на цвета
-           /* Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+            /* Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
 
-            switch (Console.ReadLine())
-            {
-                case "red":
-                    Console.BackgroundColor = ConsoleColor.Red;
-                    Console.ForegroundColor = ConsoleColor.Black;
+             switch (Console.ReadLine())
+             {
+                 case "red":
+                     Console.BackgroundColor = ConsoleColor.Red;
+                     Console.ForegroundColor = ConsoleColor.Black;
 
-                    Console.WriteLine("Your color is red!");
-                    break;
+                     Console.WriteLine("Your color is red!");
+                     break;
 
-                case "green":
-                    Console.BackgroundColor = ConsoleColor.Green;
-                    Console.ForegroundColor = ConsoleColor.Black;
+                 case "green":
+                     Console.BackgroundColor = ConsoleColor.Green;
+                     Console.ForegroundColor = ConsoleColor.Black;
 
-                    Console.WriteLine("Your color is green!");
-                    break;
-                case "cyan":
-                    Console.BackgroundColor = ConsoleColor.Cyan;
-                    Console.ForegroundColor = ConsoleColor.Black;
+                     Console.WriteLine("Your color is green!");
+                     break;
+                 case "cyan":
+                     Console.BackgroundColor = ConsoleColor.Cyan;
+                     Console.ForegroundColor = ConsoleColor.Black;
 
-                    Console.WriteLine("Your color is cyan!");
-                    break;
+                     Console.WriteLine("Your color is cyan!");
+                     break;
 
-                default:
-                    Console.BackgroundColor = ConsoleColor.Yellow;
-                    Console.ForegroundColor = ConsoleColor.Red;
+                 default:
+                     Console.BackgroundColor = ConsoleColor.Yellow;
+                     Console.ForegroundColor = ConsoleColor.Red;
 
-                    Console.WriteLine("Your color is yellow!");
-                    break;
-            }
-            Console.ReadKey();
-           */
+                     Console.WriteLine("Your color is yellow!");
+                     break;
+             }
+             Console.ReadKey();
+            */
             //Пример - 4.2. Циклы
             /*
             Console.WriteLine("Цикл while");
@@ -187,14 +187,14 @@ namespace SF.Education.Mod4_ConsoleApp
                         break;
 
                     default:
-                       /* Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Red;
+                        /* Console.BackgroundColor = ConsoleColor.Yellow;
+                         Console.ForegroundColor = ConsoleColor.Red;
 
-                        Console.WriteLine("Your color is yellow!");*/
-                       continue;
-                        break;
+                         Console.WriteLine("Your color is yellow!");*/
+                        continue;
+            
                 }
-             
+
                 K++;
 
             }
@@ -213,7 +213,7 @@ namespace SF.Education.Mod4_ConsoleApp
             Console.WriteLine("Последняя буква вашего имени: {0}", name[name.Length - 1]);
 
             //переставляем буквы в имени
-            for (int i = name.Length-1; i >= 0; i--)
+            for (int i = name.Length - 1; i >= 0; i--)
             {
                 Console.Write(name[i] + " ");
             }
@@ -237,6 +237,36 @@ namespace SF.Education.Mod4_ConsoleApp
             Console.WriteLine(array.GetUpperBound(1) + 1 + " ");
 
             Console.ReadKey();
+            Console.WriteLine("Исходный массив для сортировки: ");
+            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            foreach (var el in arr)
+            {
+                Console.Write(el + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("отсортрованный от меньшего к большему: ");
+            //Пузырьком
+            var minArr = new int[arr.Length];
+            for (int j = 0; j < arr.Length - 1; j++)
+            {
+                for (int i =0; i < arr.Length -1; i++)
+                {
+                    if (arr[i] > arr[i + 1])
+                    {
+                        var p = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = p;
+                    }
+
+                }
+
+            }
+            Console.WriteLine();
+            foreach (var el in arr)
+            {
+                Console.Write(el + " ");
+            }
+            Console.ReadKey();
 
         }
 
@@ -244,7 +274,7 @@ namespace SF.Education.Mod4_ConsoleApp
 
 
     }
-    
 
-    
+
+
 }
