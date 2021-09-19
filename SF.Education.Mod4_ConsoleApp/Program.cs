@@ -279,6 +279,36 @@ namespace SF.Education.Mod4_ConsoleApp
             Console.WriteLine();
             Console.WriteLine(sumarr2);
 
+            //Пример зубчатый массив, перебор
+            Console.WriteLine("Пример зубчатый массив, перебор: ");
+            Console.ReadKey();
+            int[][] array2 = new int[3][];
+            array2[0] = new int[2] { 1, 2 };
+            array2[1] = new int[3] { 1, 2, 3 };
+            array2[2] = new int[5] { 1, 2, 3, 4, 5 };
+
+            foreach (var num in array2)
+            {
+                foreach (var item in num)
+                {
+                    Console.Write(item + " ");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadKey();
+            //Пример подсчета положительных элементов в массиве Задание 4.3.15
+            int[] array3 = {-1, 2, 4, 0, -4};
+            int cc = 0;
+            foreach (var el in array3)
+            {
+                Console.Write(el + " ");
+                if (el > 0)
+                cc++;
+            }
+            Console.WriteLine(cc);
+            Console.ReadKey();
+
+
         }
 
 
