@@ -297,7 +297,8 @@ namespace SF.Education.Mod4_ConsoleApp
             }
             Console.ReadKey();
             //Пример подсчета положительных элементов в массиве Задание 4.3.15
-            int[] array3 = {-1, 2, 4, 0, -4};
+            Console.WriteLine("Подсчет положительных элементов в массиве");
+            int[,] array3 = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
             int cc = 0;
             foreach (var el in array3)
             {
@@ -305,6 +306,7 @@ namespace SF.Education.Mod4_ConsoleApp
                 if (el > 0)
                 cc++;
             }
+            Console.WriteLine();
             Console.WriteLine(cc);
             Console.ReadKey();
 
