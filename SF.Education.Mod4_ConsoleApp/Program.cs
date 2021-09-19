@@ -148,6 +148,8 @@ namespace SF.Education.Mod4_ConsoleApp
             } while (t < 1);
             */
             int K = 0;
+            string[] favcolors = new string[3];
+            int t = favcolors.Length;
 
             while (true)
             {
@@ -197,10 +199,33 @@ namespace SF.Education.Mod4_ConsoleApp
 
             }
 
+            Console.WriteLine("Введите своё имя");
 
+            var name = Console.ReadLine();
 
+            Console.WriteLine("Ваше имя по буквам: ");
+
+            foreach (var ch in name)
+            {
+                Console.Write(ch + " ");
+            }
+
+            Console.WriteLine("Последняя буква вашего имени: {0}", name[name.Length - 1]);
+
+            //переставляем буквы в имени
+            for (int i = name.Length-1; i >= 0; i--)
+            {
+                Console.Write(name[i] + " ");
+            }
+
+            Console.ReadKey();
         }
+
+
+
+
     }
+    
 
     
 }
