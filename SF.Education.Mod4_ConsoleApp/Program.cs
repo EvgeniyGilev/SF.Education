@@ -153,7 +153,7 @@ namespace SF.Education.Mod4_ConsoleApp
 
             while (true)
             {
-                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы(stop, чтобы пропустить этот шаг");
+                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы(stop, чтобы пропустить этот шаг)");
                 Console.WriteLine(K);
 
                 var text = Console.ReadLine();
@@ -267,7 +267,7 @@ namespace SF.Education.Mod4_ConsoleApp
             }
             Console.ReadKey();
             //Сумма элементов массива
-            Console.WriteLine("Ищем сумму элементво массива: ");
+            Console.WriteLine("Ищем сумму элементов массива: ");
             var arr2 = new int[] { 5, 6, 9, 1, 2, 3, 4 };
             var sumarr2 = 0;
             foreach (var el in arr2)
@@ -338,6 +338,23 @@ namespace SF.Education.Mod4_ConsoleApp
             Console.WriteLine();
             Console.ReadKey();
 
+            //пример с кортежем
+            //(string name, int age) anketa;
+
+            var (name1, age1) = ("Евгений", 34);
+
+            Console.WriteLine("Ваше имя: {0}", name1);
+            Console.WriteLine("Ваш возраст: {0}", age1);
+
+            Console.Write("Введите имя: ");
+            name1 = Console.ReadLine();
+            Console.Write("Введите возраст с цифрами: ");
+            age1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ваше имя: {0}", name1);
+            Console.WriteLine("Ваш возраст: {0}", age1);
+
+            Console.ReadKey();
 
         }
 
