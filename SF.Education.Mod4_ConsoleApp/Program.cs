@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Reflection.Metadata;
 
 namespace SF.Education.Mod4_ConsoleApp
 {
@@ -356,7 +357,73 @@ namespace SF.Education.Mod4_ConsoleApp
 
             Console.ReadKey();
 
+            (string Name, string Type, double Age, int NameCount) Pet;
+
+            Console.WriteLine("Введите имя питомца");
+            Pet.Name = Console.ReadLine();
+            Pet.NameCount = Pet.Name.Length;
+
+            Console.WriteLine("Введите вид питомца");
+            Pet.Type = Console.ReadLine();
+
+            Console.WriteLine("Введите возраст питомца");
+            Pet.Age = double.Parse(Console.ReadLine());
+            
+            Console.ReadKey();
+
+            //Анкетирование
+
+
+            Console.WriteLine("Задание на анкетирование:");
+            //задание 4.5.6
+            for (int i = 0; i < 3; i++)
+            {
+
+                //задание 4.5.1
+                //(string nameUser, string lastNameUser, string loginUser, int lenghtloginUser, bool isPetExists, int ageUser, string[] favColors) User;
+                //задание 4.5.2
+                (string Name, string LastName, string Login, int LoginLength, bool HasPet, string[] favcolors, double
+                    Age) User;
+
+                Console.WriteLine("Введите имя");
+
+                User.Name = Console.ReadLine();
+
+                Console.WriteLine("Введите фамилию");
+
+                User.LastName = Console.ReadLine();
+
+                Console.WriteLine("Введите логин");
+
+                User.Login = Console.ReadLine();
+
+                //задание 4.5.3
+                User.LoginLength = User.Login.Length;
+                Console.WriteLine("длина вашего логина: " + User.LoginLength);
+
+                //задание 4.5.4
+                Console.WriteLine("Есть ли у вас животные? Да или Нет");
+
+                User.HasPet = Console.ReadLine() == "да";
+
+                //задание 4.5.5
+                Console.WriteLine("Введите возраст пользователя:");
+
+                User.Age = double.Parse(Console.ReadLine());
+
+                User.favcolors = new string[3];
+                Console.WriteLine("Введите три любимых цвета пользователя");
+                Console.WriteLine("Цвет 1: ");
+                User.favcolors[0] = Console.ReadLine();
+                Console.WriteLine("Цвет 2: ");
+                User.favcolors[1] = Console.ReadLine();
+                Console.WriteLine("Цвет 3: ");
+                User.favcolors[2] = Console.ReadLine();
+            }
         }
+
+
+    }
 
 
 
@@ -365,4 +432,4 @@ namespace SF.Education.Mod4_ConsoleApp
 
 
 
-}
+
