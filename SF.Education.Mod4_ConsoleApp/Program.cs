@@ -249,7 +249,7 @@ namespace SF.Education.Mod4_ConsoleApp
             //Сортировка Пузырьком 4.3.12
             for (int j = 0; j < arr.Length; j++)
             {
-                for (int i = j+1; i < arr.Length; i++)
+                for (int i = j + 1; i < arr.Length; i++)
                 {
                     if (arr[i] < arr[j])
                     {

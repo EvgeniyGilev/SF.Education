@@ -65,8 +65,40 @@ namespace SF.Education.Mod5_ConsoleApp
 
                 return result;
             }
-            #endregion
+         
 
+            static int[] SortArray(int[] arrayForSort)
+            {
+                int[] SortedArray = arrayForSort;
+
+                for (int j = 0; j < SortedArray.Length; j++)
+                {
+                    for (int i = j + 1; i < SortedArray.Length; i++)
+                    {
+                        if (SortedArray[i] < SortedArray[j])
+                        {
+                            var p = SortedArray[i];
+                            SortedArray[i] = SortedArray[j];
+                            SortedArray[j] = p;
+                        }
+
+                    }
+
+                }
+
+                return SortedArray;
+            }
+
+            int[] exampleArray = GetArrayFromConsole();
+            exampleArray = SortArray(exampleArray);
+            Console.WriteLine("Вывод отсоритрованного массива: ");
+            foreach (var el in exampleArray)
+            {
+                Console.Write(el + " ") ;
+            }
+            Console.WriteLine("");
+            Console.ReadKey();
+            #endregion
 
         }
     }
