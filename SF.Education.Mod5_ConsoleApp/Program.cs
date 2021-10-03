@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Net.NetworkInformation;
 
 namespace SF.Education.Mod5_ConsoleApp
 {
@@ -39,7 +40,7 @@ namespace SF.Education.Mod5_ConsoleApp
             Console.ReadKey();
 
 
-            static string ShowColor(string username)
+            static string ShowColor(string username, params string[] favcolors)
             {
                 Console.WriteLine("{0}, напишите свой любимый цвет на английском с маленькой буквы",username);
                 var color = Console.ReadLine();
@@ -56,6 +57,18 @@ namespace SF.Education.Mod5_ConsoleApp
             {
                 favcolors[j] = ShowColor(anketa.name);
             }
+            // параметризированный вывод цветов
+            static void ShowColors(string username, params string[] favcolors)
+            {
+                Console.WriteLine("Ваши любимые цвета:");
+                foreach (var color in favcolors)
+                {
+                    Console.WriteLine(color);
+                }
+            }
+            ShowColors(anketa.name = "АБЫРВАЛГ",favcolors);
+
+
 
             Console.WriteLine("Цвета: ");
             foreach (var s in favcolors)
@@ -66,11 +79,11 @@ namespace SF.Education.Mod5_ConsoleApp
             Console.ReadKey();
             #endregion
 
-            #region Задание 5.1.6 
+            #region Задание 5.1.6, 5.2.14
 
-            static int[] GetArrayFromConsole()
+            static int[] GetArrayFromConsole(int num = 5)
             {
-                var result = new int[5];
+                var result = new int[num];
 
                 for (int i = 0; i < result.Length; i++)
                 {
@@ -104,14 +117,28 @@ namespace SF.Education.Mod5_ConsoleApp
                 return SortedArray;
             }
 
-            int[] exampleArray = GetArrayFromConsole();
-            exampleArray = SortArray(exampleArray);
-            Console.WriteLine("Вывод отсоритрованного массива: ");
-            foreach (var el in exampleArray)
+            int[] exampleArray = GetArrayFromConsole(10);
+           // exampleArray = SortArray(exampleArray);
+
+            static void ShowArray(int[] sArray, bool isSort = false)
             {
-                Console.Write(el + " ") ;
+                if (isSort)  sArray = SortArray(sArray);
+                foreach (var el in sArray)
+                {
+                    Console.Write(el + " ");
+                }
+                Console.WriteLine("");
+
             }
-            Console.WriteLine("");
+
+            Console.WriteLine("Вывод массива: ");
+            ShowArray(exampleArray);
+            Console.WriteLine("Вывод отсортированного массива: ");
+            ShowArray(exampleArray,true);
+
+
+
+
             Console.ReadKey();
             #endregion
             /*
