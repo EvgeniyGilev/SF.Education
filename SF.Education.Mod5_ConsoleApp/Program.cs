@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Net.NetworkInformation;
 
 namespace SF.Education.Mod5_ConsoleApp
 {
@@ -9,9 +10,9 @@ namespace SF.Education.Mod5_ConsoleApp
         {
             #region Повторенеи из модуля 4
 
-            
 
-            
+
+
             (string Name, string[] diches) User;
             Console.WriteLine("Введите Имя клиента: ");
             User.Name = Console.ReadLine();
@@ -39,9 +40,9 @@ namespace SF.Education.Mod5_ConsoleApp
             Console.ReadKey();
 
 
-            static string ShowColor(string username)
+            static string ShowColor(string username, params string[] favcolors)
             {
-                Console.WriteLine("{0}, напишите свой любимый цвет на английском с маленькой буквы",username);
+                Console.WriteLine("{0}, напишите свой любимый цвет на английском с маленькой буквы", username);
                 var color = Console.ReadLine();
                 return color;
             }
@@ -56,6 +57,18 @@ namespace SF.Education.Mod5_ConsoleApp
             {
                 favcolors[j] = ShowColor(anketa.name);
             }
+            // параметризированный вывод цветов
+            static void ShowColors(string username, params string[] favcolors)
+            {
+                Console.WriteLine("Ваши любимые цвета:");
+                foreach (var color in favcolors)
+                {
+                    Console.WriteLine(color);
+                }
+            }
+            ShowColors(anketa.name = "АБЫРВАЛГ", favcolors);
+
+
 
             Console.WriteLine("Цвета: ");
             foreach (var s in favcolors)
@@ -66,11 +79,11 @@ namespace SF.Education.Mod5_ConsoleApp
             Console.ReadKey();
             #endregion
 
-            #region Задание 5.1.6 
+            #region Задание 5.1.6, 5.2.14 -5.2.17
 
-            static int[] GetArrayFromConsole()
+            static int[] GetArrayFromConsole(int num = 5)
             {
-                var result = new int[5];
+                var result = new int[num];
 
                 for (int i = 0; i < result.Length; i++)
                 {
@@ -80,7 +93,7 @@ namespace SF.Education.Mod5_ConsoleApp
 
                 return result;
             }
-         
+
 
             static int[] SortArray(int[] arrayForSort)
             {
@@ -103,26 +116,34 @@ namespace SF.Education.Mod5_ConsoleApp
 
                 return SortedArray;
             }
+            //вызов ввода массива размерности 10
+            int[] exampleArray = GetArrayFromConsole(10);
+            // exampleArray = SortArray(exampleArray);
 
-            int[] exampleArray = GetArrayFromConsole();
-            exampleArray = SortArray(exampleArray);
-            Console.WriteLine("Вывод отсоритрованного массива: ");
-            foreach (var el in exampleArray)
+            static void ShowArray(int[] sArray, bool isSort = false)
             {
-                Console.Write(el + " ") ;
+                if (isSort) sArray = SortArray(sArray);
+                foreach (var el in sArray)
+                {
+                    Console.Write(el + " ");
+                }
+                Console.WriteLine("");
+
             }
-            Console.WriteLine("");
+
+            Console.WriteLine("Вывод массива: ");
+            //просто вывод массива
+            ShowArray(exampleArray);
+            //вывод отсортированного массива
+            Console.WriteLine("Вывод отсортированного массива: ");
+            ShowArray(exampleArray, true);
+
+
+
+
             Console.ReadKey();
             #endregion
-            /*
-            static string ShowColor(string username)
-            {
 
-            }
-
-
-
-            */
         }
     }
 }
