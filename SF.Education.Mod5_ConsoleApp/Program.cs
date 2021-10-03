@@ -24,9 +24,24 @@ namespace SF.Education.Mod5_ConsoleApp
 
             Console.ReadKey();
 
-            static string ShowColor()
+            // задание 5.2.2
+
+            (string name, int age) anketa;
+
+            Console.Write("Введите имя: ");
+            anketa.name = Console.ReadLine();
+            Console.Write("Введите возраст с цифрами: ");
+            anketa.age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ваше имя: {0}", anketa.name);
+            Console.WriteLine("Ваш возраст: {0}", anketa.age);
+
+            Console.ReadKey();
+
+
+            static string ShowColor(string username)
             {
-                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+                Console.WriteLine("{0}, напишите свой любимый цвет на английском с маленькой буквы",username);
                 var color = Console.ReadLine();
                 return color;
             }
@@ -39,7 +54,7 @@ namespace SF.Education.Mod5_ConsoleApp
             string[] favcolors = new string[3];
             for (int j = 0; j < 3; j++)
             {
-                favcolors[j] = ShowColor();
+                favcolors[j] = ShowColor(anketa.name);
             }
 
             Console.WriteLine("Цвета: ");
@@ -99,7 +114,15 @@ namespace SF.Education.Mod5_ConsoleApp
             Console.WriteLine("");
             Console.ReadKey();
             #endregion
+            /*
+            static string ShowColor(string username)
+            {
 
+            }
+
+
+
+            */
         }
     }
 }
