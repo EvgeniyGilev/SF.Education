@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SF.Education.Mod3_ConsoleApp", "SF_ConsoleAppMod3\SF.Education.Mod3_ConsoleApp.csproj", "{8A22A136-EE91-4A30-8C59-58E2D27BF13E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SF.Education.Mod4_ConsoleApp", "SF.Education.Mod4_ConsoleApp\SF.Education.Mod4_ConsoleApp.csproj", "{02189A3E-9932-4D42-9D24-C6833552D43D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SF.Education.Mod4_ConsoleApp", "SF.Education.Mod4_ConsoleApp\SF.Education.Mod4_ConsoleApp.csproj", "{02189A3E-9932-4D42-9D24-C6833552D43D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SF.Education.Mod5_ConsoleApp", "SF.Education.Mod5_ConsoleApp\SF.Education.Mod5_ConsoleApp.csproj", "{A57489BC-C25D-4602-AB02-7BB91A5AB2A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{02189A3E-9932-4D42-9D24-C6833552D43D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02189A3E-9932-4D42-9D24-C6833552D43D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02189A3E-9932-4D42-9D24-C6833552D43D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A57489BC-C25D-4602-AB02-7BB91A5AB2A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A57489BC-C25D-4602-AB02-7BB91A5AB2A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A57489BC-C25D-4602-AB02-7BB91A5AB2A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A57489BC-C25D-4602-AB02-7BB91A5AB2A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
