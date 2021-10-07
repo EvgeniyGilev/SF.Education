@@ -51,7 +51,7 @@ namespace SF.Education.Mod5_ConsoleApp
             #region Задание 5.1.5
 
 
-
+            
 
             string[] favcolors = new string[3];
             for (int j = 0; j < 3; j++)
@@ -189,6 +189,86 @@ namespace SF.Education.Mod5_ConsoleApp
             }
             int res = SumNumbers(ref t1, t2, out int num3, 4);
             Console.WriteLine("Наш результат:" + res);
+
+            
+
+            exampleArray = GetArrayFromConsole(10);
+            // exampleArray = SortArray(exampleArray);
+
+
+            Console.WriteLine("Сортировки");
+
+            static int[] SortArrayAsc(in int[] arrayForSort)
+            {
+                int[] SortedArray = arrayForSort;
+
+                for (int j = 0; j < SortedArray.Length; j++)
+                {
+                    for (int i = j + 1; i < SortedArray.Length; i++)
+                    {
+                        if (SortedArray[i] < SortedArray[j])
+                        {
+                            var p = SortedArray[i];
+                            SortedArray[i] = SortedArray[j];
+                            SortedArray[j] = p;
+                        }
+
+                    }
+
+                }
+
+                return SortedArray;
+            }
+            static int[] SortArrayDesc(int[] arrayForSort)
+            {
+                int[] SortedArray = arrayForSort;
+
+                for (int j = 0; j < SortedArray.Length; j++)
+                {
+                    for (int i = j + 1; i < SortedArray.Length; i++)
+                    {
+                        if (SortedArray[i] > SortedArray[j])
+                        {
+                            var p = SortedArray[i];
+                            SortedArray[i] = SortedArray[j];
+                            SortedArray[j] = p;
+                        }
+
+                    }
+
+                }
+
+                return SortedArray;
+            }
+            static void SortArray2(in int[] arrayForSort, out int[] sorteddesc, out int[] sortedasc)
+            {
+                int[] arr1 = new int[arrayForSort.Length];
+                int[] arr2 = new int[arrayForSort.Length];
+                arrayForSort.CopyTo(arr1,0);
+                arrayForSort.CopyTo(arr2, 0);
+                sorteddesc  = SortArrayDesc(arr1);
+
+                sortedasc = SortArrayAsc(arr2);
+
+            }
+            static void ShowArray2(int[] sArray)
+            {
+                foreach (var el in sArray)
+                {
+                    Console.Write(el + " ");
+                }
+                Console.WriteLine("");
+
+            }
+
+
+            Console.WriteLine("Выводим Массив отсортированный по возрастанию");
+            SortArray2(exampleArray, out int[] sortd, out int[] srta );
+            ShowArray2(srta);
+            Console.WriteLine("Выводим Массив отсортированный по убыванию");
+
+            ShowArray2(sortd);
+            Console.ReadKey();
 
             #endregion
         }
