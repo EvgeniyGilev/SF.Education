@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Net.NetworkInformation;
+using System.Xml;
 
 namespace SF.Education.Mod5_ConsoleApp
 {
@@ -144,6 +145,52 @@ namespace SF.Education.Mod5_ConsoleApp
             Console.ReadKey();
             #endregion
 
+            #region Задание 5.3.2-5.3.4
+
+            var myAge = 34;
+            static void ChangeAge(ref int age)
+            {
+                Console.WriteLine("Введите возраст: ");
+                age = Convert.ToInt32(Console.ReadLine());
+
+            }
+            ChangeAge(ref myAge);
+            Console.WriteLine(myAge);
+
+            static void BigDataOperation(in int[] arr)
+            {
+                arr[0] = 4;
+            }
+
+            var arr = new int[] { 1, 2, 3 };
+            BigDataOperation(arr);
+
+            Console.WriteLine(arr[0]);
+
+            static void GetName(out string name, out string oldname)
+            {
+                oldname = "Евгения";
+                Console.WriteLine("Введите имя");
+                name = Console.ReadLine();
+
+            }
+
+            string _name = "123";
+            string _oldname = "345";
+            GetName(out _name, out _oldname);
+            Console.WriteLine(_name + "   " + _oldname);
+            
+            int t1 = 3;
+            int t2 = 5;
+            int SumNumbers(ref int num1, in int num2, out int num3,int num4)
+            {
+                num3 = num1 + num2;
+                return  num3 * num4;
+            }
+            int res = SumNumbers(ref t1, t2, out int num3, 4);
+            Console.WriteLine("Наш результат:" + res);
+
+            #endregion
         }
     }
 }
