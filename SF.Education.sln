@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SF.Education.Mod5_ConsoleAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SF.Education.Mod6_ConsoleApp", "SF.Education.Mod6_ConsoleApp\SF.Education.Mod6_ConsoleApp.csproj", "{F404156A-C746-4C0F-ACBF-E422DD6ADEFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SF.Education.Mod7_CondolseApp", "SF.Education.Mod7_CondolseApp\SF.Education.Mod7_CondolseApp.csproj", "{DDE92B4A-4CCB-46D2-98E9-68A0D80E3D15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SF.Education.Mod7_ConsolseApp", "SF.Education.Mod7_CondolseApp\SF.Education.Mod7_ConsolseApp.csproj", "{DDE92B4A-4CCB-46D2-98E9-68A0D80E3D15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SF.Education.Mod8_ConsoleApp", "SF.Education.Mod8_ConsoleApp\SF.Education.Mod8_ConsoleApp.csproj", "{DE9B9260-7473-4C76-9F0C-89F4645BBF10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{DDE92B4A-4CCB-46D2-98E9-68A0D80E3D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDE92B4A-4CCB-46D2-98E9-68A0D80E3D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDE92B4A-4CCB-46D2-98E9-68A0D80E3D15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE9B9260-7473-4C76-9F0C-89F4645BBF10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE9B9260-7473-4C76-9F0C-89F4645BBF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE9B9260-7473-4C76-9F0C-89F4645BBF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE9B9260-7473-4C76-9F0C-89F4645BBF10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
