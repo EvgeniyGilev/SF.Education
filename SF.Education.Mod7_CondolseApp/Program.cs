@@ -2,22 +2,40 @@
 
 namespace SF.Education.Mod7_CondolseApp
 {
+    /// <summary>
+    /// The smart helper.
+    /// </summary>
     class SmartHelper
     {
         private string name;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SmartHelper"/> class.
+        /// </summary>
+        /// <param name="name">The name.</param>
         public SmartHelper(string name)
         {
             this.name = name;
         }
 
+        /// <summary>
+        /// Greetings the.
+        /// </summary>
+        /// <param name="name">The name.</param>
         public void Greetings(string name)
         {
             Console.WriteLine("Привет, {0}, я интеллектуальный помощник {1}", name, this.name);
         }
     }
+    /// <summary>
+    /// The program.
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Mains the.
+        /// </summary>
+        /// <param name="args">The args.</param>
         static void Main(string[] args)
         {
             SmartHelper helper = new SmartHelper("Олег");
@@ -50,12 +68,18 @@ namespace SF.Education.Mod7_CondolseApp
 
     }
 
+    /// <summary>
+    /// The generic.
+    /// </summary>
     class Generic<T>
     {
         public T Field = default(T); // Поле типа T
 
     }
 
+    /// <summary>
+    /// The record.
+    /// </summary>
     class Record<T1,T2>
     {
         public T1 Id;
@@ -63,13 +87,22 @@ namespace SF.Education.Mod7_CondolseApp
         public DateTime Date;
     }
 
+    /// <summary>
+    /// The base class.
+    /// </summary>
     class BaseClass
     {
+        /// <summary>
+        /// Gets or sets the counter.
+        /// </summary>
         public virtual int Counter
         {
             get;
             set;
         }
+        /// <summary>
+        /// Displays the.
+        /// </summary>
         public virtual void Display()
         {
             Console.WriteLine("Метод класса BaseClass");
@@ -77,9 +110,15 @@ namespace SF.Education.Mod7_CondolseApp
 
     }
 
+    /// <summary>
+    /// The derived class.
+    /// </summary>
     class DerivedClass : BaseClass
     {
         private int counter;
+        /// <summary>
+        /// Gets or sets the counter.
+        /// </summary>
         public override int Counter
         {
 
@@ -97,6 +136,9 @@ namespace SF.Education.Mod7_CondolseApp
                 }
             }
         }
+        /// <summary>
+        /// Displays the.
+        /// </summary>
         public override void Display()
         {
             base.Display();
@@ -105,46 +147,83 @@ namespace SF.Education.Mod7_CondolseApp
 
     }
 
+    /// <summary>
+    /// The a.
+    /// </summary>
     class A
     {
+        /// <summary>
+        /// Displays the.
+        /// </summary>
         public virtual void Display()
         {
             Console.WriteLine("A");
         }
     }
+    /// <summary>
+    /// The b.
+    /// </summary>
     class B : A
     {
+        /// <summary>
+        /// Displays the.
+        /// </summary>
         public new void Display()
         {
             Console.WriteLine("B");
         }
     }
+    /// <summary>
+    /// The c.
+    /// </summary>
     class C : A
     {
+        /// <summary>
+        /// Displays the.
+        /// </summary>
         public override void Display()
         {
             Console.WriteLine("C");
         }
     }
+    /// <summary>
+    /// The d.
+    /// </summary>
     class D : B
     {
+        /// <summary>
+        /// Displays the.
+        /// </summary>
         public new void Display()
         {
             Console.WriteLine("D");
         }
     }
+    /// <summary>
+    /// The e.
+    /// </summary>
     class E : C
     {
+        /// <summary>
+        /// Displays the.
+        /// </summary>
         public new void Display()
         {
             Console.WriteLine("E");
         }
     }
 
+    /// <summary>
+    /// The indexing class.
+    /// </summary>
     class IndexingClass
     {
         private int[] array;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IndexingClass"/> class.
+        /// </summary>
+        /// <param name="array">The array.</param>
         public IndexingClass(int[] array)
         {
             this.array = array;

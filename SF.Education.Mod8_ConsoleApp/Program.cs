@@ -2,8 +2,15 @@
 using System.IO;
 namespace DriveManager
 {
+    /// <summary>
+    /// The program.
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Mains the.
+        /// </summary>
+        /// <param name="args">The args.</param>
         static void Main(string[] args)
         {
             // получим системные диски

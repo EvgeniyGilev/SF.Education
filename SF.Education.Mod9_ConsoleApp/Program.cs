@@ -2,40 +2,62 @@
 
 namespace SF.Education.Mod9_ConsoleApp
 {
+    /// <summary>
+    /// The program.
+    /// </summary>
     public class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Mains the.
+        /// </summary>
+        /// <param name="args">The args.</param>
+        public static void Main(string[] args)
         {
-            Action showMessageDelegate = ShowMessage;
-            showMessageDelegate.Invoke();
-
-            Func<int,
-                int,
-                int,
-                int> sumDelegate = Sum;
-            int result = sumDelegate.Invoke(1, 30, 120);
-            Console.WriteLine(result);
-
-            Predicate<string> checkLengthDelegate = CheckLength;
-            bool status = checkLengthDelegate.Invoke("skill_factory");
-            Console.WriteLine(status);
-
-            Console.ReadLine();
+            try
+            {
+                int a = 5 / Convert.ToInt32(Console.ReadLine());
+                Exception ex = new Exception("Hello!");
+      
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+                throw;
+            }
         }
 
-        static void ShowMessage()
+        /// <summary>
+        /// Shows the message.
+        /// </summary>
+        public static void ShowMessage()
         {
             Console.WriteLine("Hello World!");
         }
 
-        static int Sum(int a, int b, int c)
+        /// <summary>
+        /// Sums the a b c.
+        /// </summary>
+        /// <param name="a">The a.</param>
+        /// <param name="b">The b.</param>
+        /// <param name="c">The c.</param>
+        /// <returns>sum numbers</returns>
+        public static int Sum(int a, int b, int c)
         {
             return a + b + c;
         }
 
-        static bool CheckLength(string _row)
+        /// <summary>
+        /// Checks the length.
+        /// </summary>
+        /// <param name="row">The row.</param>
+        /// <returns>A bool.</returns>
+        public static bool CheckLength(string row)
         {
-            if (_row.Length > 3) return true;
+            if (row.Length > 3)
+            {
+                return true;
+            }
+
             return false;
         }
     }
